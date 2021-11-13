@@ -50,9 +50,6 @@ flex-direction: column;
 
 .card-info{
 	font-size:25px;
-	display: flex;
-	flex-direction: column;
-	justify-content: space-around
 }
 
 .card-buttons {
