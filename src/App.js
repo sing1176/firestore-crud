@@ -5,22 +5,11 @@ import AppHeader from './components/AppHeader';
 import ListView from './components/ListView';
 import React, { useState, useEffect } from 'react';
 import db from '../src/firebase';
-import { collection, getDocs, onSnapshot } from 'firebase/firestore';
+import { collection, onSnapshot } from 'firebase/firestore';
 
 function App() {
 	const superheroCol = collection(db, 'Superheros');
 	const [superheros, setSuperheros] = useState([]);
-
-	// useEffect(() => {
-	// 	const getData = async () => {
-	// 		const superheroSnapshot = await getDocs(superheroCol);
-	// 		setSuperheros(
-	// 			superheroSnapshot.docs.map((doc) => ({ ...doc.data(), id: doc.id }))
-	// 		);
-	// 	};
-	// 	getData();
-	// }, []);
-
 	useEffect(() => {
 		const getData = async () => {
 			onSnapshot(superheroCol, (snapshot) => {
