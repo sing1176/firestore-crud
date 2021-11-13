@@ -1,25 +1,44 @@
-import logo from './logo.svg';
 import './App.css';
+import { Switch, Route } from 'react-router-dom';
+import NewItemView from './components/NewItemView';
+import AppHeader from './components/AppHeader';
+import ListView from './components/ListView';
+import React, { useState, useEffect } from 'react';
+import db from '../src/firebase';
+import { collection, getDocs } from 'firebase/firestore';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+	const superheroCol = collection(db, 'Superheros');
+	const [superheros, setSuperheros] = useState([]);
+
+	useEffect(() => {
+		const getData = async () => {
+			const superheroSnapshot = await getDocs(superheroCol);
+			setSuperheros(
+				superheroSnapshot.docs.map((doc) => ({ ...doc.data(), id: doc.id }))
+			);
+		};
+
+		getData();
+	}, []);
+
+
+
+	return (
+		<div className="App">
+			<header>
+				<AppHeader />
+			</header>
+			<Switch>
+				<Route exact path="/">
+					<ListView data={superheros} />
+				</Route>
+				<Route path="/addnewitem">
+					<NewItemView />
+				</Route>
+			</Switch>
+		</div>
+	);
 }
 
 export default App;
