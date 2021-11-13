@@ -19,7 +19,7 @@ function App() {
 			});
 		};
 		getData();
-	},[]);
+	});
 
 	return (
 		<div className="App">
