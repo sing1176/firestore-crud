@@ -19,6 +19,9 @@ function App() {
 		};
 		getData();
 	},[]);
+
+
+	console.log(superheros);
 	
 
 	return (
