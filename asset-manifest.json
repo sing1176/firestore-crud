@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/firestore-crud/static/css/main.9bfecc86.chunk.css",
-    "main.js": "/firestore-crud/static/js/main.7580d15f.chunk.js",
-    "main.js.map": "/firestore-crud/static/js/main.7580d15f.chunk.js.map",
+    "main.js": "/firestore-crud/static/js/main.fe97cd93.chunk.js",
+    "main.js.map": "/firestore-crud/static/js/main.fe97cd93.chunk.js.map",
     "runtime-main.js": "/firestore-crud/static/js/runtime-main.30bdd820.js",
     "runtime-main.js.map": "/firestore-crud/static/js/runtime-main.30bdd820.js.map",
     "static/css/2.383c0125.chunk.css": "/firestore-crud/static/css/2.383c0125.chunk.css",
@@ -18,6 +18,6 @@
     "static/css/2.383c0125.chunk.css",
     "static/js/2.9678bf75.chunk.js",
     "static/css/main.9bfecc86.chunk.css",
-    "static/js/main.7580d15f.chunk.js"
+    "static/js/main.fe97cd93.chunk.js"
   ]
 }
