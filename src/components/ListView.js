@@ -3,7 +3,7 @@ import { useState } from 'react';
 import { updateDoc, deleteDoc, doc } from 'firebase/firestore';
 import db from '../firebase';
 
-const ListView = ({ data, setData }) => {
+const ListView = ({ data }) => {
 	const [id, setId] = useState('');
 
 	const [editing, setEditing] = useState(false);

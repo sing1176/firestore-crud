@@ -41,7 +41,6 @@ flex-direction: column;
 }
 
 .card{
-	display: none;
 	margin: 1rem 1rem;
 	background-color: burlywood;
 	padding: 1rem;

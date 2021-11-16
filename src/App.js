@@ -30,6 +30,7 @@ function App() {
 			<header>
 				<AppHeader />
 			</header>
+			<main>
 			<Switch>
 				<Route exact path="/">
 					<ListView data={superheros} />
@@ -38,6 +39,7 @@ function App() {
 					<NewItemView />
 				</Route>
 			</Switch>
+			</main>
 		</div>
 	);
 }
