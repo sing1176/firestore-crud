@@ -8,9 +8,10 @@ import db from '../src/firebase';
 import { collection, onSnapshot } from 'firebase/firestore';
 
 function App() {
-	const [superheros, setSuperheros] = useState([]);	
+	const [superheros, setSuperheros] = useState([]);
+
 	useEffect(() => {
-		const getData = async () => {
+		const getData = () => {
 			onSnapshot(collection(db, 'Superheros'), (snapshot) => {
 				setSuperheros(
 	 			snapshot.docs.map((doc) => ({ ...doc.data(), id: doc.id }))
