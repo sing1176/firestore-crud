@@ -19,7 +19,7 @@
 
 .title {
 	font-size: 40px;
-	color: rgb(226, 0, 0);
+	color: rgb(189, 0, 0);
 }
 
 .headerDiv {
@@ -42,7 +42,6 @@ flex-direction: column;
 
 .card{
 	margin: 1rem 1rem;
-	background-color: burlywood;
 	padding: 1rem;
 	gap:5px
 }

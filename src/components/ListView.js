@@ -1,6 +1,7 @@
 import { Button, Container, Modal } from 'react-bootstrap';
 import { useState } from 'react';
 import { updateDoc, deleteDoc, doc } from 'firebase/firestore';
+import '../App.css';
 import db from '../firebase';
 
 const ListView = ({ data }) => {
